@@ -1,3 +1,3 @@
 # Introduction
 
-This is a React practice, try to build a personal website.
+This is a React.js practice, try to build a personal website.
