@@ -1,19 +1,90 @@
-.nav-items{
-    display: flex;
-    align-items: center;
-    background-color:rgb(50, 50, 50);
-    height: 30px;
-    padding: 30px 20px;
+header{
+    background-color: rgb(50, 50, 50, .85);
+    text-align: center;
+    position: fixed;
+    z-index: 999; /*Ensure it will stay at top*/
+    width: 100%;
 }
 
-.nav-title{
-    color: aquamarine;
+header h1{
+    color: rgb(128, 255, 212);
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    margin-left: 2em;
+    align-items: center;
+    display: flex;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display: block;
+    background-color: azure;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: "";
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 7px;
+    content: "";
+}
+.nav-toggle-label span::after{
+    top: 7px;
+    content: "";
+}
+
+.nav-toggle:checked ~ nav{ /*sibling of nav*/
+    display: block;
+    transform: scale(1, 1);
+}
+
+nav{
+    position: absolute;
+    width: 10rem;
+    height: 1000%;
+    text-align: left;
+    top:100%;
+    left: 0;
+    background-color: rgb(75, 75, 75);
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform 200ms ease-in-out;
 }
 
 .list-items{
-    color: aliceblue;
-    margin-left: auto;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    display: flex;
-    column-gap: 10px;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a{
+    color: aliceblue;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: rgb(189, 89, 89);
 }

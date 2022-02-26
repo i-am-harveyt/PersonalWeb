@@ -5,20 +5,29 @@ import "./Header.css";
 
 function Navigations(){
     return(
-        <ul className="list-items">
-            <li>About</li>
-            <li>Works</li>
-            <li>Contact</li>
-        </ul>
+        <div>
+            <input type="checkbox" id="nav-toggle" className="nav-toggle"/>
+            <label for="nav-toggle" className="nav-toggle-label">
+                <span></span>
+            </label>
+            <nav>
+                <ul className="list-items">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     )
 }
 
 
 export default function Header(){
     return(
-        <div className="nav-items">
-            <h1 className="nav-title">Harvey's Personal Site</h1>
+        <header>
+            <h1>Harvey's Personal Site</h1>
             <Navigations/>
-        </div>
+        </header>
     )
 }
