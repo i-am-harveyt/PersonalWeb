@@ -12,10 +12,10 @@ function Navigations(){
             </label>
             <nav>
                 <ul className="list-items">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="../PersonalWeb">Home</a></li>
+                    <li><a href="../pages/About.html">About</a></li>
+                    <li><a href="../pages/Works.html">Works</a></li>
+                    <li><a href="../pages/Contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
