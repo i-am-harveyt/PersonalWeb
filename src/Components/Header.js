@@ -5,19 +5,27 @@ import "./Header.css";
 
 function Navigations(){
     return(
+        <nav>
+            <ul className="list-items">
+                <li><a href="../PersonalWeb">Home</a></li>
+                <li><a href="../pages/About">About</a></li>
+                <li><a href="../pages/Works">Works</a></li>
+                <li><a href="../pages/Contact">Contact</a></li>
+            </ul>
+        </nav>
+    )
+}
+
+
+function NavBar(){
+    return(
         <div>
-            <input type="checkbox" id="nav-toggle" className="nav-toggle"/>
-            <label for="nav-toggle" className="nav-toggle-label">
+            {/* <input type="checkbox" id="nav-toggle" className="nav-toggle"/> */}
+            {/* <label for="nav-toggle" className="nav-toggle-label">
                 <span></span>
-            </label>
-            <nav>
-                <ul className="list-items">
-                    <li><a href="../PersonalWeb">Home</a></li>
-                    <li><a href="../pages/About.html">About</a></li>
-                    <li><a href="../pages/Works.html">Works</a></li>
-                    <li><a href="../pages/Contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            </label> */}
+            <button id='nav-toggle' className="nav-toggle-button"/>
+            <Navigations />
         </div>
     )
 }
@@ -27,7 +35,7 @@ export default function Header(){
     return(
         <header>
             <h1>Harvey's Personal Site</h1>
-            <Navigations/>
+            <NavBar/>
         </header>
     )
 }
