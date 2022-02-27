@@ -2,8 +2,8 @@ header{
     background-color: rgb(50, 50, 50, .85);
     text-align: center;
     position: fixed;
-    z-index: 999; /*Ensure it will stay at top*/
-    width: 100%;
+    z-index: 999; /*Ensure it will stay at top
+*/    width: 100%;
 }
 
 header h1{
@@ -14,33 +14,51 @@ header h1{
     display: none;
 }
 
-.nav-toggle-button{
+.nav-toggle-label{
     position: absolute;
     top: 0;
     left: 0;
-    height: 40px;
-    width: 40px;
-    margin-top: 1.5em;
+    height: 100%;
     margin-left: 2em;
     align-items: center;
     display: flex;
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
-    border: none;
-    padding: 0;
-    /* background: none; */
 }
 
-/* .nav-toggle-button:focus ~ nav{
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display: block;
+    background-color: azure;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: "";
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 7px;
+    content: "";
+}
+.nav-toggle-label span::after{
+    top: 7px;
+    content: "";
+}
+
+.nav-toggle:checked ~ nav{ /*sibling of nav*/
     display: block;
     transform: scale(1, 1);
 }
 
-.nav-toggle-button:focus ~ nav a{
+.nav-toggle:checked ~ nav a{
     opacity: 1;
     transition: opacity 50ms ease-in-out;
-} */
+}
 
 nav{
     position: absolute;
@@ -49,8 +67,7 @@ nav{
     text-align: left;
     top:100%;
     left: 0;
-    /* background-color: rgb(75, 75, 75); */
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(75, 75, 75);
     transform: scale(0, 1);
     transform-origin: left;
     /* transform: rotateY(90deg); */
@@ -84,11 +101,7 @@ nav a:hover{
 }
 
 @media screen and (min-width: 1000px) {
-    /* .nav-toggle-label{
-        display: none;
-    } */
-
-    .nav-toggle-button{
+    .nav-toggle-label{
         display: none;
     }
 
@@ -164,53 +177,3 @@ nav a:hover{
     }
     
 }
-
-/*The checkbox ver*/
-
-/* .nav-toggle-label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    margin-left: 2em;
-    align-items: center;
-    display: flex;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after{
-    display: block;
-    background-color: azure;
-    height: 2px;
-    width: 2em;
-    border-radius: 2px;
-    position: relative;
-    cursor: pointer;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after{
-    content: "";
-    position: absolute;
-}
-
-.nav-toggle-label span::before{
-    bottom: 7px;
-    content: "";
-}
-.nav-toggle-label span::after{
-    top: 7px;
-    content: "";
-} */
-
-
-/* .nav-toggle:checked ~ nav{
-    display: block;
-    transform: scale(1, 1);
-}
-
-.nav-toggle:checked ~ nav a{
-    opacity: 1;
-    transition: opacity 50ms ease-in-out;
-} */

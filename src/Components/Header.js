@@ -20,12 +20,11 @@ function Navigations(){
 function NavBar(){
     return(
         <div>
-            {/* <input type="checkbox" id="nav-toggle" className="nav-toggle"/> */}
-            {/* <label for="nav-toggle" className="nav-toggle-label">
+            <input type="checkbox" id="nav-toggle" className="nav-toggle"/>
+            <label for="nav-toggle" className="nav-toggle-label">
                 <span></span>
-            </label> */}
-            <button id='nav-toggle' className="nav-toggle-button"/>
-            <Navigations />
+            </label>
+            <Navigations/>
         </div>
     )
 }
