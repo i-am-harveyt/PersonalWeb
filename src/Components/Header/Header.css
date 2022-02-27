@@ -1,199 +1,199 @@
-header{
-    background-color: rgb(50, 50, 50, .85);
-    text-align: center;
-    position: fixed;
-    z-index: 999; /*Ensure it will stay at top*/
-    width: 100%;
-    top: 0;
+header {
+  background-color: rgb(50, 50, 50, 0.85);
+  text-align: center;
+  position: fixed;
+  z-index: 999; /*Ensure it will stay at top*/
+  width: 100%;
+  top: 0;
 }
 
-header h1{
-    color: rgb(128, 255, 212);
+header h1 {
+  color: rgb(128, 255, 212);
 }
 
-.nav-toggle{
-    display: none;
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    margin-left: 2em;
-    margin-top: 2.5em;
+.nav-toggle {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin-left: 2em;
+  margin-top: 2.5em;
 }
 
-.nav-toggle-label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    margin-left: 2em;
-    margin-top: 1em;
-    align-items: center;
-    display: flex;
-    height: 3em;
-    width: 3em;
-    cursor: pointer;
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  margin-left: 2em;
+  margin-top: 1em;
+  align-items: center;
+  display: flex;
+  height: 3em;
+  width: 3em;
+  cursor: pointer;
 }
 
 .nav-toggle-label span,
 .nav-toggle-label span::before,
-.nav-toggle-label span::after{
-    display: block;
-    background-color: azure;
-    height: 2px;
-    width: 1.7em;
-    border-radius: 2px;
-    position: absolute;
+.nav-toggle-label span::after {
+  display: block;
+  background-color: azure;
+  height: 2px;
+  width: 1.7em;
+  border-radius: 2px;
+  position: absolute;
 }
 
-.nav-toggle-label span{
-    margin-left: 0.65em;
+.nav-toggle-label span {
+  margin-left: 0.65em;
 }
 
 .nav-toggle-label span::before,
-.nav-toggle-label span::after{
-    content: "";
-    position: absolute;
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
 }
 
-.nav-toggle-label span::before{
-    bottom: 7px;
-    content: "";
+.nav-toggle-label span::before {
+  bottom: 7px;
+  content: "";
 }
-.nav-toggle-label span::after{
-    top: 7px;
-    content: "";
-}
-
-.nav-toggle:checked ~ nav{ /*sibling of nav*/
-    display: block;
-    transform: scale(1, 1);
+.nav-toggle-label span::after {
+  top: 7px;
+  content: "";
 }
 
-.nav-toggle:checked ~ nav a{
-    opacity: 1;
-    transition: opacity 50ms ease-in-out;
+.nav-toggle:checked ~ nav {
+  /*sibling of nav*/
+  display: block;
+  transform: scale(1, 1);
 }
 
-.nav-toggle-label:hover{
-    background-color: rgb(25, 25, 25);
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 100ms ease-in-out;
 }
 
-nav{
-    position: absolute;
-    width: 10rem;
-    height: 1000%;
-    text-align: left;
-    top:100%;
-    left: 0;
-    background-color: rgb(75, 75, 75);
-    transform: scale(0, 1);
-    transform-origin: left;
-    transition: transform 150ms ease-in-out;
+.nav-toggle-label:hover {
+  background-color: rgb(25, 25, 25);
 }
 
-.list-items{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+nav {
+  position: absolute;
+  width: 10rem;
+  height: 1000%;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background-color: rgb(75, 75, 75);
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform 200ms ease-in-out;
 }
 
-nav li{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 2em;
+.list-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-nav a{
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 1rem;
-    text-transform: uppercase;
-    opacity: 0;
-    transition: opacity 50ms ease-in-out;
+nav li {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
 }
 
-nav a:hover{
-    color: rgb(189, 89, 89);
+nav a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 50ms ease-in-out;
+}
+
+nav a:hover {
+  color: rgb(189, 89, 89);
 }
 
 @media screen and (min-width: 1000px) {
-    .nav-toggle-label{
-        display: none;
-    }
+  .nav-toggle-label {
+    display: none;
+  }
 
-    header {
-        display: grid;
-        grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
-    }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+  }
 
-    header h1{
-        grid-column: 2 / 3;
-    }
+  header h1 {
+    grid-column: 2 / 3;
+  }
 
-    nav{
-        all: unset;
-        grid-column: 3 / 4;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
-    nav ul{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    
-    nav li{
-        margin-left: 3em;
-        margin-top: 1.8em;
-    }
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
-    nav a{
-        opacity: 1;
-        position: relative;
-    }
+  nav li {
+    margin-left: 3em;
+    margin-top: 1.8em;
+  }
 
-    /*Here comes the animation part*/
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
 
-    nav a::before{
-        content: "";
-        display: block;
-        height: 3px;
-        background-color: aliceblue;
-        position: absolute;
-        top: -1em;
-        left: 0;
-        right: 0;
-        transform: scale(0, 1);
-        transform-origin: left;
-        transition: transform ease-in-out 150ms;
-    }
+  /*Here comes the animation part*/
 
-    nav a:hover::before{
-        transform: scale(1, 1);
-    }
+  nav a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: aliceblue;
+    position: absolute;
+    top: -1em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 150ms;
+  }
 
-    nav a::after{
-        content: "";
-        display: block;
-        height: 3px;
-        background-color: aliceblue;
-        position: absolute;
-        bottom: -1em;
-        left: 0;
-        right: 0;
-        transform: scale(0, 1);
-        transform-origin: right;
-        transition: transform ease-in-out 150ms;
-    }
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
 
-    nav a:hover::after{
-        transform: scale(1, 1);
-    }
-    
+  nav a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: aliceblue;
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform ease-in-out 150ms;
+  }
+
+  nav a:hover::after {
+    transform: scale(1, 1);
+  }
 }
