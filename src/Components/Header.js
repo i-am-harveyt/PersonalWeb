@@ -8,7 +8,7 @@ function Navigations(){
         <nav>
             <ul className="list-items">
                 <li><a href="../PersonalWeb">Home</a></li>
-                <li><a href="../pages/About">About</a></li>
+                <li><a href="../pages/About.html">About</a></li>
                 <li><a href="../pages/Works">Works</a></li>
                 <li><a href="../pages/Contact">Contact</a></li>
             </ul>
