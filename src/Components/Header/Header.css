@@ -4,6 +4,7 @@ header{
     position: fixed;
     z-index: 999; /*Ensure it will stay at top*/
     width: 100%;
+    top: 0;
 }
 
 header h1{

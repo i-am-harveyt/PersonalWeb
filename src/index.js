@@ -1,17 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Components/Header'
-
-function Page(){
-  return(
-    <div>
-      <Header />
-    </div>
-  )
-}
+import App from './App';
+import {BrowserRouter} from 'react-router-dom'
 
 ReactDOM.render(
-  <Page />,
-  document.getElementById('root')
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+  ,document.getElementById('root')
 );
