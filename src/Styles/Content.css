@@ -1,0 +1,24 @@
+.body{
+    display: grid;
+    border-radius: 5px;
+    max-width: 100%;
+    min-width: 300px;
+    width: auto;
+    background-color: aliceblue;
+    margin-top: 5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.content{
+    color: rgb(25, 45, 60);
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+}
+
+ol{
+    display: grid;
+    gap: 10px;
+}

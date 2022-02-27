@@ -1,4 +1,5 @@
 import React from "react";
+import "../Styles/Content.css"
 
 export default function Work() {
   return (
