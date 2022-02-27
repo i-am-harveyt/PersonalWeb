@@ -33,6 +33,7 @@ header h1{
     width: 2em;
     border-radius: 2px;
     position: relative;
+    cursor: pointer;
 }
 
 .nav-toggle-label span::before,
