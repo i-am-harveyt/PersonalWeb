@@ -6,10 +6,6 @@ export default function Work() {
   return (
     <div>
       <ContentBlock/>
-      <ContentBlock/>
-      <ContentBlock/>
-      <ContentBlock/>
-      <ContentBlock/>
     </div>
   );
 }
