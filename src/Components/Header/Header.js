@@ -38,7 +38,7 @@ function NavBar() {
 export default function Header() {
   return (
     <header>
-      <h1>DemoWeb</h1>
+      <h1>Harvey's Website</h1>
       <NavBar />
     </header>
   );
