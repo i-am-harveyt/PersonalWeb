@@ -1,10 +1,18 @@
+:root{
+    --blockbackground: rgb(240, 248, 255);
+    --headbarcolor: rgb();
+    --funcbarcolor: rgb();
+    --fontcolor: rgb(60, 60, 60);
+    --testcolor: aqua;
+}
+
 .block{
     display: grid;
     border-radius: 15px;
     width: auto;
     max-width: 500px;
     height: auto;
-    background-color: aliceblue;
+    background-color: var(--blockbackground);
     margin-top: 5rem;
     margin-left: auto;
     margin-right: auto;
@@ -13,8 +21,14 @@
 .head-bar{
     width:100%;
     height:4rem;
-    background-color: aqua;
+    background-color: var(--testcolor);
     border-radius: 15px 15px 0 0;
+}
+
+.block-title{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
 }
 
 .image-in-block{
@@ -30,7 +44,7 @@
     width:100%;
     height:100%;
     height:3rem;
-    background-color: aqua;
+    background-color: var(--testcolor);
 }
 
 .word-block{
@@ -41,6 +55,7 @@
     margin-bottom: 3rem;
 }
 
-.word{
-    color: rgb(35, 55, 70);
+.words{
+    font-size: 17px;
+    color: var(--fontcolor);
 }
