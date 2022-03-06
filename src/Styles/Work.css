@@ -1,0 +1,13 @@
+.Blocks{
+    display: grid;
+    margin-top: 6rem;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3,1fr);
+}
+
+@media screen and (min-width:1000px) {
+    .Blocks{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
