@@ -1,4 +1,9 @@
-.Blocks{
+.works{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.blocks{
     display: grid;
     margin-top: 6rem;
     gap: 1.5rem;

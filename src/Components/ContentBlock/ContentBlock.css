@@ -6,6 +6,10 @@
     --testcolor: aqua;
 }
 
+.block-title{
+    font-size: 20px;
+}
+
 .block{
     display: grid;
     border-radius: 15px;
