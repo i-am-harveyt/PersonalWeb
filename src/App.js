@@ -13,10 +13,10 @@ export default function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/work" element={<Work />} />
-        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/PersonalWeb/" element={<Home />} />
+        <Route exact path="/PersonalWeb/about" element={<About />} />
+        <Route exact path="/PersonalWeb/work" element={<Work />} />
+        <Route exact path="/PersonalWeb/contact" element={<Contact />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
