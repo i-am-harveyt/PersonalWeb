@@ -5,7 +5,7 @@ export default function ContentBlock(props) {
   return (
     <div className="block">
       <div className="head-bar">
-        <h2 className="block-title">{props.title}</h2>
+        <h2>{props.title}</h2>
       </div>
       <img src={image} alt="" className="image-in-block" />
       <div className="function-bar"></div>
