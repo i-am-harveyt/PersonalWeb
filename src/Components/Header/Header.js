@@ -7,7 +7,7 @@ function Navigations() {
     <nav>
       <ul className="list-items">
         <li>
-          <Link to="/PersonalWeb/home">Home</Link>
+          <Link to="/PersonalWeb/">Home</Link>
         </li>
         <li>
           <Link to="/PersonalWeb/about">About</Link>
