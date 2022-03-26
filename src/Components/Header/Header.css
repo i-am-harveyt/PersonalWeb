@@ -7,6 +7,10 @@ header {
   top: 0;
 }
 
+a:link{
+  text-decoration: none;
+}
+
 header h1 {
   color: rgb(128, 255, 212);
 }

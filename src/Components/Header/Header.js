@@ -7,9 +7,6 @@ function Navigations() {
     <nav>
       <ul className="list-items">
         <li>
-          <Link to="/PersonalWeb/">Home</Link>
-        </li>
-        <li>
           <Link to="/PersonalWeb/about">About</Link>
         </li>
         <li>
@@ -38,7 +35,11 @@ function NavBar() {
 export default function Header() {
   return (
     <header>
-      <h1>Harvey's Website</h1>
+      <a>
+        <Link to="/PersonalWeb/">
+          <h1>Harvey's Website</h1>
+        </Link>
+      </a>
       <NavBar />
     </header>
   );
