@@ -40,6 +40,7 @@ export default function Header() {
           <h1>Harvey's Website</h1>
         </Link>
       </a>
+      <p></p>
       <NavBar />
     </header>
   );

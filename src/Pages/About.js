@@ -42,6 +42,8 @@ export default function About() {
 
         <h2>程式方面經歷：</h2>
 
+        <a href="https://github.com/i-am-harveyt/">My GitHub Page</a>
+
         <ol>
           <li>
             修習兩門程式設計課，分別為兩種程式語言（Java、Python），皆有專案開發經驗。其中

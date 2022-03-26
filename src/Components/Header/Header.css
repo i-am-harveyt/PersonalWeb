@@ -125,23 +125,18 @@ nav a:hover {
   color: rgb(189, 89, 89);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
   .nav-toggle-label {
     display: none;
   }
 
   header {
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
-  }
-
-  header h1 {
-    grid-column: 2 / 3;
+    grid-template-columns: minmax(300px, 300px) auto minmax(100px, 300px) minmax(10px, 30px);
   }
 
   nav {
     all: unset;
-    grid-column: 3 / 4;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -171,7 +166,7 @@ nav a:hover {
     height: 3px;
     background-color: aliceblue;
     position: absolute;
-    top: -1em;
+    top: -0.5rem;
     left: 0;
     right: 0;
     transform: scale(0, 1);
@@ -189,7 +184,7 @@ nav a:hover {
     height: 3px;
     background-color: aliceblue;
     position: absolute;
-    bottom: -1em;
+    bottom: -0.5rem;
     left: 0;
     right: 0;
     transform: scale(0, 1);
