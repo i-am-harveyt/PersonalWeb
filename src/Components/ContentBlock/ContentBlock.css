@@ -1,7 +1,7 @@
 :root{
-    --blockbackground: rgb(240, 248, 255);
+    --blockbackground: aliceblue;
     --fontcolor: rgb(60, 60, 60);
-    --testcolor: aqua;
+    --barcolor: aliceblue;
     --h2size: 20px;
 }
 
@@ -22,7 +22,7 @@ h2{
 
 .head-bar{
     height:4rem;
-    background-color: var(--testcolor);
+    background-color: var(--barcolor);
     border-radius: 15px 15px 0 0;
     padding-left: 10%;
     padding-right: 10%;
@@ -41,7 +41,7 @@ h2{
     width:100%;
     height:100%;
     height:3rem;
-    background-color: var(--testcolor);
+    background-color: var(--barcolor);
 }
 
 .word-block{

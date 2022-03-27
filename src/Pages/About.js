@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Content.css";
+import { AiFillGithub } from "react-icons/ai";
 
 export default function About() {
   return (
@@ -33,7 +34,7 @@ export default function About() {
           2020學年，也是一個對我未來規劃最大衝擊的時期。算是為了準備修習由經濟系所主導的「資料分析與社會研究跨域專長」，我回過頭來修習由資管系所開設的商管程式設計。Python
           對從 Java 入門，並且被 C
           語言鍛鍊過的我來說算是比較容易。在理解課程內容以及作業撰寫比較順利，過去所學習的知識也幫助我可以盡量優化自己的程式碼。而在期末專案中，自己得以順利建立一個較為完整的專案
-          GenoMaker，並且彌補其他組員實力不足的缺陷。我也在課程的休息中，通過孔令傑老師的介紹學到程式如何在管理中發揮作用，以及在萬事達卡來這裡分享時萌發對資料科學的好奇心。
+          GenoMaker，並且在過往經驗與能力的支持下彌補了其他組員實力不足的缺陷。我也在課程的休息中，通過孔令傑老師的介紹學到程式如何在管理中發揮作用，以及在萬事達卡來課堂分享時萌發對資料科學的好奇心。
           <br />
           在下學期，我才終於確立自己想到資管所學習的志向，我想尋求更多的鍛鍊，不但想對資料科學有更近一步的學習，也想利用這個過程繼續鍛鍊自己的
           Programming
@@ -41,8 +42,6 @@ export default function About() {
         </p>
 
         <h2>程式方面經歷：</h2>
-
-        <a href="https://github.com/i-am-harveyt/">My GitHub Page</a>
 
         <ol>
           <li>
@@ -57,6 +56,12 @@ export default function About() {
             參加社會模擬工作坊，於工作坊內競賽中以程式實作個人行為模式的模型，加以預測在不同條件下個體的行為模式，以及在社會情境中引發的結果。獲得該競賽第一名。
           </li>
         </ol>
+
+        <p>過往所撰寫過的程式碼（包含練習用）</p>
+        <a href="https://github.com/i-am-harveyt/">
+          <AiFillGithub />
+          My Github Page
+        </a>
       </div>
     </div>
   );

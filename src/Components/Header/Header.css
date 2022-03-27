@@ -1,10 +1,14 @@
 header {
-  background-color: rgb(50, 50, 50, 0.85);
-  text-align: center;
-  position: fixed;
-  z-index: 999; /*Ensure it will stay at top*/
-  width: 100%;
   top: 0;
+  margin-top: 0;
+  position: sticky;
+  z-index: 1; /*Ensure it will stay at top*/
+  height: 5rem;
+  width: 100%;
+  background-color: rgba(50, 50, 50, 0.85);
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 a:link{
@@ -89,6 +93,7 @@ header h1 {
 
 nav {
   position: absolute;
+  z-index: 2; 
   width: 10rem;
   height: 1000%;
   text-align: left;
@@ -131,8 +136,14 @@ nav a:hover {
   }
 
   header {
+    text-align: unset;
+    justify-content: unset;
     display: grid;
     grid-template-columns: minmax(300px, 300px) auto minmax(100px, 300px) minmax(10px, 30px);
+  }
+  
+  h1{
+    margin-left: 2rem;
   }
 
   nav {
