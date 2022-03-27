@@ -1,57 +1,53 @@
-:root{
-    --blockbackground: aliceblue;
-    --fontcolor: rgb(60, 60, 60);
-    --barcolor: aliceblue;
-    --h2size: 20px;
+:root {
+  --blockbackground: aliceblue;
+  --fontcolor: rgb(60, 60, 60);
+  --barcolor: aliceblue;
+  --h2size: 16px;
 }
 
-h2{
-    font-size: var(--h2size);
+h2 {
+  font-size: var(--h2size);
 }
 
-.block{
-    display: grid;
-    border-radius: 15px;
-    width: auto;
-    max-width: 400px;
-    height: auto;
-    background-color: var(--blockbackground);
-    margin-left: auto;
-    margin-right: auto;
+.block {
+  border-radius: 15px;
+  max-width: 400px;
+  height: auto;
+  background-color: var(--blockbackground);
+  text-align: center;
 }
 
-.head-bar{
-    height:4rem;
-    background-color: var(--barcolor);
-    border-radius: 15px 15px 0 0;
-    padding-left: 10%;
-    padding-right: 10%;
+.head-bar {
+  height: 2rem;
+  background-color: var(--barcolor);
+  border-radius: 15px 15px 0 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  align-items: center;
+  justify-content: center;
 }
 
-.image-in-block{
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    max-width: 90%;
-    height: auto;
-    max-height: 100%;
+.image-in-block {
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  max-height: 100%;
 }
 
-.function-bar{
-    width:100%;
-    height:100%;
-    height:3rem;
-    background-color: var(--barcolor);
+.function-bar {
+  width: 100%;
+  height: 100%;
+  height: 3rem;
+  background-color: var(--barcolor);
 }
 
-.word-block{
-    margin-left: auto;
-    min-width: 90%;
-    margin-right: auto;
-    margin-bottom: 3rem;
+.word-block {
+  margin-left: auto;
+  min-width: 90%;
+  margin-right: auto;
 }
 
-.words{
-    font-size: 17px;
-    color: var(--fontcolor);
+.words {
+  font-size: 17px;
+  color: var(--fontcolor);
 }

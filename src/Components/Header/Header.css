@@ -1,108 +1,63 @@
 header {
-  top: 0;
-  margin-top: 0;
   position: sticky;
+  top: 0;
   z-index: 1; /*Ensure it will stay at top*/
   height: 5rem;
   width: 100%;
   background-color: rgba(50, 50, 50, 0.85);
-  display: flex;
+  display: grid;
+  grid-template-columns: 100px auto 100px;
   text-align: center;
-  justify-content: center;
 }
 
-a:link{
+a:link {
   text-decoration: none;
 }
 
-header h1 {
-  color: rgb(128, 255, 212);
+header a {
+  grid-column-start: 2;
+  color: rgb(130, 255, 210);
 }
 
 .nav-toggle {
-  display: none;
   position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
+  left: 2rem;
+  top: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 2em;
-  margin-top: 2.5em;
 }
 
-.nav-toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  margin-left: 2em;
-  margin-top: 1em;
-  align-items: center;
-  display: flex;
-  height: 3em;
-  width: 3em;
+.menu-icon {
+  font-size: xx-large;
+  color: aliceblue;
+}
+
+.nav-toggle:hover {
+  background-color: rgb(40, 40, 40, 1);
   cursor: pointer;
 }
 
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background-color: azure;
-  height: 2px;
-  width: 1.7em;
-  border-radius: 2px;
-  position: absolute;
-}
-
-.nav-toggle-label span {
-  margin-left: 0.65em;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: "";
-  position: absolute;
-}
-
-.nav-toggle-label span::before {
-  bottom: 7px;
-  content: "";
-}
-.nav-toggle-label span::after {
-  top: 7px;
-  content: "";
-}
-
-.nav-toggle:checked ~ nav {
-  /*sibling of nav*/
-  display: block;
-  transform: scale(1, 1);
-}
-
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 100ms ease-in-out;
-}
-
-.nav-toggle-label:hover {
-  background-color: rgb(25, 25, 25);
+nav {
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform 200ms ease-in-out;
 }
 
 nav {
   position: absolute;
-  z-index: 2; 
+  z-index: 2;
   width: 10rem;
   height: 1000%;
   text-align: left;
   top: 100%;
   left: 0;
   background-color: rgb(75, 75, 75);
-  transform: scale(0, 1);
-  transform-origin: left;
-  transition: transform 200ms ease-in-out;
 }
 
 .list-items {
@@ -131,37 +86,32 @@ nav a:hover {
 }
 
 @media screen and (min-width: 600px) {
-  .nav-toggle-label {
+  .nav-toggle {
     display: none;
   }
 
   header {
+    position: sticky;
     text-align: unset;
     justify-content: unset;
     display: grid;
-    grid-template-columns: minmax(300px, 300px) auto minmax(100px, 300px) minmax(10px, 30px);
+    grid-template-columns: 30px minmax(100px, 1fr) auto minmax(100px, 1fr) 30px;
+    align-items: center;
   }
-  
-  h1{
-    margin-left: 2rem;
+
+  header a {
+    grid-column: 2 / 3;
   }
 
   nav {
     all: unset;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    grid-column: 4 / 5;
   }
 
   nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-
-  nav li {
-    margin-left: 3em;
-    margin-top: 1.8em;
   }
 
   nav a {

@@ -1,10 +1,11 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { CgMenu } from "react-icons/cg";
 
 function Navigations() {
   return (
-    <nav>
+    <nav className="nav">
       <ul className="list-items">
         <li>
           <Link to="/PersonalWeb/about">About</Link>
@@ -21,20 +22,17 @@ function Navigations() {
 }
 
 function NavBar() {
-  return (
-    <div>
-      <input type="checkbox" id="nav-toggle" className="nav-toggle" />
-      <label for="nav-toggle" className="nav-toggle-label">
-        <span></span>
-      </label>
-      <Navigations />
-    </div>
-  );
+  return <Navigations />;
 }
 
 export default function Header() {
+  let onclick = () => {};
+
   return (
     <header>
+      <button className="nav-toggle">
+        <CgMenu className="menu-icon" />
+      </button>
       <a>
         <Link to="/PersonalWeb/">
           <h1>Harvey's Website</h1>

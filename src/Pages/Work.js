@@ -9,6 +9,12 @@ export default function Work() {
       <div className="blocks">
       <ContentBlock title="1. Personal Website"/>
       <ContentBlock title="2. GenoMaker"/>
+      <ContentBlock title="2. GenoMaker"/>
+      <ContentBlock title="2. GenoMaker"/>
+      <ContentBlock title="2. GenoMaker"/>
+      <ContentBlock title="2. GenoMaker"/>
+      <ContentBlock title="2. GenoMaker"/>
+      <ContentBlock title="2. GenoMaker"/>
       </div>
     </div>
   );
