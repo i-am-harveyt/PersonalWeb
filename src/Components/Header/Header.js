@@ -5,7 +5,7 @@ import { CgMenu } from "react-icons/cg";
 
 function Navigations() {
   return (
-    <nav className="nav">
+    <nav id="nav">
       <ul className="list-items">
         <li>
           <Link to="/PersonalWeb/about">About</Link>
@@ -26,18 +26,32 @@ function NavBar() {
 }
 
 export default function Header() {
-  let onclick = () => {};
+  let onclick = () => {
+    let nav = document.getElementById("nav");
+    nav.classList.toggle("active");
+  };
+  document.onclick = function (e) {
+    let nav = document.getElementById("nav");
+    if (e.target.id === "nav" || e.target.class === "menu-icon"){
+      console.log("Cool!")
+      nav.classList.toggle("active");
+    }
+    if (e.target.id !== "nav" && e.target.className !== "nav-toggle") {
+      console.log("Wow!")
+      nav.classList.remove("active");
+    }
+  };
 
   return (
     <header>
-      <button className="nav-toggle">
-        <CgMenu className="menu-icon" />
+      <button className="nav-toggle" onClick={onclick}>
+        {<CgMenu className="menu-icon"/>}
       </button>
-      <a>
-        <Link to="/PersonalWeb/">
-          <h1>Harvey's Website</h1>
+      <h1>
+        <Link to="/PersonalWeb/" className="link">
+          Harvey's Website
         </Link>
-      </a>
+      </h1>
       <p></p>
       <NavBar />
     </header>
